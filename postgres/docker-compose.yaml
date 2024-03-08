@@ -2,7 +2,7 @@ version: '3.5'
 
 services:
   postgres:
-    container_name: postgres-server
+    container_name: postgres-server-2
     image: postgres:12
     env_file:
       - database.env
@@ -15,7 +15,7 @@ services:
     restart: unless-stopped
 
   pgadmin:
-    container_name: pgadmin-server
+    container_name: pgadmin-server-2
     image: dpage/pgadmin4
     env_file:
       - database.env
