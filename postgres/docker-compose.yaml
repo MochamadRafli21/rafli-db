@@ -1,9 +1,7 @@
-version: '3.5'
-
 services:
   postgres:
-    container_name: postgres-server-2
-    image: postgres:12
+    container_name: postgres-server
+    image: postgres:16
     env_file:
       - database.env
     volumes:
@@ -15,8 +13,8 @@ services:
     restart: unless-stopped
 
   pgadmin:
-    container_name: pgadmin-server-2
-    image: dpage/pgadmin4
+    container_name: pgadmin-server
+    image: dpage/pgadmin4:8.5
     env_file:
       - database.env
     volumes:
